@@ -2,9 +2,11 @@ var aim = 0;
 var total = 0;
 var win = 0;
 var score = 0;
+var lose = 0;
 var valueOfTheDim  = [];
 
 $(document).ready(function(){
+    debugger;
     gameStart();
     $("#img1").on("click",function(){
         let dimValue = valueOfTheDim[0]; 
@@ -13,17 +15,17 @@ $(document).ready(function(){
     });
     $("#img2").on("click",function(){
         let dimValue = valueOfTheDim[1]; 
-        console.log(dimValue);
+       // console.log(dimValue);
         scoreAndCount(dimValue);
     });
     $("#img3").on("click",function(){
         let dimValue = valueOfTheDim[2]; 
-        console.log(dimValue);
+        //console.log(dimValue);
         scoreAndCount(dimValue);
     });
     $("#img4").on("click",function(){
         let dimValue = valueOfTheDim[3]; 
-        console.log(dimValue);
+        //console.log(dimValue);
         scoreAndCount(dimValue);
     });
 });
@@ -35,22 +37,29 @@ function randomInt(min,max) // min and max included
 
 function scoreAndCount(x){
     total += x;
-    console.log(total);
+    $("#Mysum").text(total);
+   // console.log(total);
     if ( total == aim){
         win ++;
+        
+        $('#Wins').text(win);
+        
         gameNext();
         total = 0;
     }
     if (total > aim){
         score --;
+        lose ++;
+        $('#Times').text(score);
+        $('#Loses').text(lose);
         if(score <= 0){
             gameStart();
         }
         total = 0;
     }
-    console.log("total " + total);
-    console.log("Win " + win);
-    console.log("Score " + score);
+    // console.log("total " + total);
+    // console.log("Win " + win);
+     console.log("Score " + score);
     
 }
 
@@ -59,7 +68,8 @@ function gameNext(){
         valueOfTheDim.push(randomInt(1,12))
     }
     aim = randomInt(19,120);
-    console.log("Head " + aim);
+    $("#Goalnum").text(aim);
+    //console.log("Head " + aim);
     
 }
 function gameStart(){

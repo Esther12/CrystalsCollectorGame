@@ -6,30 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="row col-12 d-flex justify-content-center">
-        <h1>Crystial XXX</h1>
-    </div>
-    <div class= " row col-4 d-flex justify-content-center">
-        <h3>Rules</h3>
-        <p></p>
+    <div class="container-fluid justify-content-left border">
 
-    </div>
-    <div class=" row col-8 d-flex justify-content-center">
-        <div class="d-flex justify-content-center">
-            <h3>Total : </h3>
-        </div>
-        <img id = "img1" class="col-3" src="assets/images/img1.jpeg" alt="Dim1" width="250" height="300">
-        <img id = "img2" class="col-3" src="assets/images/img2.jpeg" alt="Dim1" width="250" height="300">
-        <img id = "img3" class="col-3" src="assets/images/img3.jpg" alt="Dim1" width="250" height="300">
-        <img id = "img4" class="col-3" src="assets/images/img4.jpeg" alt="Dim1" width="250" height="300">
     
-    <div class="">
-        <h4> Your Score: </h4>
+            <div class="row col-12 d-flex justify-content-center border">
+                    <h1>Crystial XXX</h1>
+            </div>
+            <div class="row">
+                    <div class= "col-4  justify-content-center border">
+                            <h3>Rules</h3>
+                            <p></p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p>Wins: <span id="Wins"></span></p>
+                                </div>
+                                <div class="col-6">
+                                    <p>Times: <span id="Times"></span></p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-8 border">
+                            <div class="row justify-content-center border">
+                                <h3 class="col-12 text-center">Total : </h3>
+                            </div>
+                            <div class="row">
+                                <img id = "img1" class="col-3 border" src="assets/images/img1.jpeg" alt="Dim1" >
+                                <img id = "img2" class="col-3 border" src="assets/images/img2.jpeg" alt="Dim1" >
+                                <img id = "img3" class="col-3 border" src="assets/images/img3.jpg" alt="Dim1" >
+                                <img id = "img4" class="col-3 border" src="assets/images/img4.jpeg" alt="Dim1">
+                            </div>
+                            <div class="text-center">
+                                <h4> Your Score: </h4>
+                            </div>
+                    </div>
+            </div>
     </div>
-</div>
     <script src="assets/js/game.js"></script>
 </body>
 </html>
